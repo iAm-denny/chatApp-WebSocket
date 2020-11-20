@@ -15,7 +15,10 @@ function Chat({ location }) {
 
   useEffect(() => {
     socket = io.connect(ENDPOINT);
-    socket.emit("join", { name: query.name, room: query.room });
+    socket.emit("join", { name: query.name, room: query.room }, (error) => {
+      alert("User is taken")
+      window.location.href="/"
+    });
   }, [ENDPOINT, location.search]);
 
   useEffect(() => {

@@ -3,7 +3,8 @@ let users = [];
 const addUser = ({id, name, room}) => {
     
   const user = { id, name, room };
-
+  const existUser= users.find(user => user.name === name)
+  if(existUser) return {error: "Username is taken"}
   users.push(user);
   return { user };
 };
