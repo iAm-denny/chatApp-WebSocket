@@ -1,0 +1,44 @@
+.styleRight {
+  display: flex;
+  flex-direction: column;
+}
+.chatMessage {
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  height: 50vh;
+  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none;
+}
+.chatMessage::-webkit-scrollbar { 
+    display: none;
+}
+.chatMessage div {
+  display: flex;
+}
+.chatMessage div span {
+  color: grey;
+  font-style: italic;
+  position: relative;
+  top: 30px;
+  font-size: 13px;
+}
+.perMessage {
+  display: flex;
+  justify-content: end;
+  width: fit-content;
+  background: #fff;
+  color: #000;
+  border-radius: 50px;
+  padding: 10px;
+  margin: 20px;
+}
+ol {
+  overflow: scroll;
+  height: 30vh;
+  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none;
+}
+ol::-webkit-scrollbar { 
+  display: none;
+}
